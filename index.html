@@ -3,267 +3,141 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Mohammed Mali · Menuisier</title>
-<meta name="description" content="Mohammed Mali — Menuisier · Carpenter · نجار. Meubles sur mesure, cuisines, portes, placards.">
-<meta name="theme-color" content="#3b2618">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233b2618'/%3E%3Ctext x='50%25' y='62%25' text-anchor='middle' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%23e9c48f'%3EMM%3C/text%3E%3C/svg%3E">
+<title>Amine Anbar · AnbarElec</title>
+<meta name="description" content="AnbarElec — Électricien · Réseaux, caméras, maison intelligente.">
+<meta name="theme-color" content="#0b1a2e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1a2e'/%3E%3Cpath d='M36 6 16 36h14l-4 22 22-32H34z' fill='%23ffc928'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --paper: #f6efe4;
-    --paper-2: #efe4d3;
-    --wood-dark: #3b2618;
-    --wood: #6b4226;
-    --wood-mid: #8a5a36;
-    --honey: #c98b45;
-    --honey-light: #e9c48f;
-    --ink: #2a1c12;
-    --muted: #7a6656;
-    --line: rgba(59, 38, 24, 0.14);
-    --serif: "Fraunces", Georgia, "Times New Roman", serif;
-    --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  }
-  html[lang="ar"] { --serif: "Cairo", system-ui, sans-serif; --sans: "Cairo", system-ui, sans-serif; }
+:root{
+  --bg:#07111f; --navy:#0b1a2e; --navy2:#12294a; --volt:#ffc928; --volt2:#ff9f1c;
+  --cyan:#3ad6ff; --paper:#f3f6fa; --card:#ffffff; --ink:#0b1a2e; --muted:#5d6f86;
+  --line:rgba(11,26,46,.12);
+  --serif:"Space Grotesk",system-ui,sans-serif; --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+html[lang="ar"]{--serif:"Cairo",system-ui,sans-serif;--sans:"Cairo",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg)}
+body{
+  font-family:var(--sans);color:var(--ink);min-height:100vh;min-height:100dvh;
+  display:flex;justify-content:center;align-items:center;padding:24px 16px;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  background:
+    radial-gradient(circle at 15% 10%,rgba(58,214,255,.12),transparent 40%),
+    radial-gradient(circle at 85% 90%,rgba(255,201,40,.10),transparent 40%),
+    linear-gradient(rgba(58,214,255,.05) 1px,transparent 1px) 0 0/32px 32px,
+    linear-gradient(90deg,rgba(58,214,255,.05) 1px,transparent 1px) 0 0/32px 32px,
+    var(--bg);
+}
+.card{width:100%;max-width:430px;background:var(--paper);border-radius:22px;overflow:hidden;
+  box-shadow:0 30px 70px rgba(0,0,0,.55),0 0 0 1px rgba(58,214,255,.15);animation:rise .6s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { background: #2a1c12; }
+.hero{position:relative;padding:18px 22px 68px;color:#eaf4ff;
+  background:
+    radial-gradient(120% 80% at 80% 0%,rgba(58,214,255,.22),transparent 60%),
+    linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px) 0 0/22px 22px,
+    linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px) 0 0/22px 22px,
+    linear-gradient(160deg,#16396b,#0b1a2e 70%)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.brand{font-family:var(--serif);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--volt)}
+html[lang="ar"] .brand{letter-spacing:0;font-size:13px}
+.langs{display:flex;gap:2px;padding:3px;background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.14);border-radius:10px;direction:ltr}
+.langs button{font:700 11.5px var(--sans);color:rgba(234,244,255,.7);background:transparent;border:0;padding:5px 9px;border-radius:7px;cursor:pointer}
+.langs button[aria-pressed="true"]{background:var(--volt);color:var(--navy)}
+.who{display:flex;align-items:center;gap:16px;margin-top:26px}
+.logo{flex:none;width:74px;height:74px;border-radius:50%;display:grid;place-items:center;background:var(--navy);
+  border:3px solid var(--volt);box-shadow:0 0 0 5px rgba(255,201,40,.18),0 0 26px rgba(255,201,40,.45);color:var(--volt)}
+.logo svg{width:40px;height:40px}
+.name{font-family:var(--serif);font-size:28px;font-weight:700;line-height:1.1}
+.role{margin-top:5px;font-size:14.5px;color:var(--volt);font-weight:600}
+/* cable strip */
+.cable{position:absolute;left:0;right:0;bottom:0;height:26px;direction:ltr;
+  background:repeating-linear-gradient(135deg,var(--volt) 0 14px,var(--navy) 14px 28px);
+  border-top:2px solid var(--volt2)}
 
-  body {
-    font-family: var(--sans);
-    color: var(--ink);
-    min-height: 100vh; min-height: 100dvh;
-    display: flex; justify-content: center; align-items: center;
-    padding: 24px 16px;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-    /* dark wood planks background */
-    background:
-      repeating-linear-gradient(90deg, rgba(0,0,0,.18) 0 2px, transparent 2px 120px),
-      repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 7px),
-      repeating-linear-gradient(0deg, rgba(0,0,0,.05) 0 3px, transparent 3px 19px),
-      linear-gradient(180deg, #4a3020, #2a1c12);
-  }
+.body{padding:22px 22px 20px}
+.tagline{font-family:var(--serif);font-size:18px;line-height:1.4;font-weight:500;color:var(--navy);margin-bottom:18px}
+html[lang="ar"] .tagline{font-weight:600;font-size:17px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:6px 11px;border-radius:999px;font-size:12.5px;font-weight:600;color:var(--navy2);background:#e5edf7;border:1px solid var(--line)}
+.badge svg{width:14px;height:14px}
 
-  .card {
-    width: 100%; max-width: 430px;
-    background: var(--paper);
-    border-radius: 22px;
-    overflow: hidden;
-    box-shadow: 0 30px 70px rgba(0,0,0,.5), 0 2px 0 rgba(255,255,255,.08) inset;
-    animation: rise .6s cubic-bezier(.2,.8,.2,1) both;
-  }
-  @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 12px;border-radius:14px;font:700 15px var(--sans);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .15s,box-shadow .2s}
+.btn:active{transform:scale(.98)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn.call{background:var(--navy);color:#eaf4ff}
+.btn.call:hover{box-shadow:0 8px 22px rgba(11,26,46,.4)}
+.btn.wa{background:#25d366;color:#06301a}
+.btn.wa:hover{box-shadow:0 8px 22px rgba(37,211,102,.35)}
+.btn.quote{grid-column:1/-1;background:linear-gradient(120deg,var(--volt),var(--volt2));color:var(--navy)}
+.btn.quote:hover{box-shadow:0 10px 26px rgba(255,159,28,.45)}
 
-  /* ---------- Header: wood panel ---------- */
-  .hero {
-    position: relative;
-    padding: 18px 22px 64px;
-    color: #fbf3e6;
-    background:
-      radial-gradient(120% 80% at 20% 0%, rgba(233,196,143,.25), transparent 60%),
-      repeating-radial-gradient(ellipse at 30% 140%, rgba(0,0,0,.10) 0 2px, transparent 2px 11px),
-      repeating-linear-gradient(100deg, rgba(255,255,255,.04) 0 1px, transparent 1px 6px),
-      linear-gradient(160deg, #8a5a36, #5a3620 55%, #3b2618);
-  }
-  .top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
-  .brand {
-    font-family: var(--serif); font-size: 12px; letter-spacing: .22em; text-transform: uppercase;
-    color: var(--honey-light); opacity: .9;
-  }
-  html[lang="ar"] .brand { letter-spacing: 0; font-size: 13px; }
-  .langs {
-    display: flex; gap: 2px; padding: 3px;
-    background: rgba(0,0,0,.22); border: 1px solid rgba(255,255,255,.12);
-    border-radius: 10px; direction: ltr;
-  }
-  .langs button {
-    font: 700 11.5px var(--sans); color: rgba(251,243,230,.7);
-    background: transparent; border: 0; padding: 5px 9px; border-radius: 7px; cursor: pointer;
-  }
-  html[lang="ar"] .langs button { font-family: "Inter", sans-serif; }
-  .langs button[aria-pressed="true"] { background: var(--honey-light); color: var(--wood-dark); }
+h2{font-family:var(--serif);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);display:flex;align-items:center;gap:10px;margin:0 0 12px}
+html[lang="ar"] h2{letter-spacing:0;font-size:14px}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
 
-  .who { display: flex; align-items: center; gap: 16px; margin-top: 26px; }
-  .logo {
-    flex: none; width: 74px; height: 74px; border-radius: 50%;
-    display: grid; place-items: center;
-    background: var(--paper);
-    color: var(--wood);
-    border: 3px solid var(--honey-light);
-    box-shadow: 0 6px 18px rgba(0,0,0,.3);
-  }
-  .logo svg { width: 40px; height: 40px; }
-  .name { font-family: var(--serif); font-size: 28px; font-weight: 800; line-height: 1.1; letter-spacing: -0.01em; }
-  .role { margin-top: 5px; font-size: 14.5px; color: var(--honey-light); font-weight: 600; }
+.services{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:22px}
+.svc{display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:12px;background:var(--card);border:1px solid var(--line);font-size:13.5px;font-weight:600;line-height:1.25;border-inline-start:3px solid var(--volt)}
+.svc svg{width:22px;height:22px;flex:none;color:var(--volt2)}
 
-  /* ruler strip at bottom of hero */
-  .ruler {
-    position: absolute; left: 0; right: 0; bottom: 0; height: 26px;
-    background:
-      repeating-linear-gradient(90deg, var(--wood-dark) 0 1px, transparent 1px 8px) bottom / 100% 7px no-repeat,
-      repeating-linear-gradient(90deg, var(--wood-dark) 0 1.5px, transparent 1.5px 40px) bottom / 100% 13px no-repeat,
-      linear-gradient(#e9c48f, #d9ab6c);
-    border-top: 1px solid rgba(0,0,0,.25);
-    direction: ltr;
-  }
+.list{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-bottom:18px}
+.row{display:flex;align-items:center;gap:12px;padding:12px 14px;color:inherit;text-decoration:none}
+.row+.row{border-top:1px solid var(--line)}
+a.row:hover{background:rgba(255,201,40,.12)}
+.ico{width:36px;height:36px;flex:none;border-radius:10px;display:grid;place-items:center;background:var(--navy);color:var(--volt)}
+.ico svg{width:18px;height:18px}
+.meta{flex:1;min-width:0}
+.label{display:block;font-size:11.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+html[lang="ar"] .label{text-transform:none;letter-spacing:0;font-size:12.5px}
+.value{display:block;font-size:clamp(12.5px,3.5vw,14.5px);font-weight:600;margin-top:2px;overflow-wrap:anywhere}
+html[dir="rtl"] .value[dir="ltr"]{text-align:right}
+.chev{color:var(--muted);flex:none}
+.chev svg{width:16px;height:16px}
+html[dir="rtl"] .chev svg{transform:scaleX(-1)}
 
-  /* ---------- Body ---------- */
-  .body { padding: 22px 22px 20px; }
+.save{width:100%;display:flex;align-items:center;justify-content:center;gap:9px;padding:14px;border-radius:14px;background:transparent;color:var(--navy);border:1.5px dashed rgba(11,26,46,.45);font:700 15px var(--sans);cursor:pointer;transition:background .2s}
+.save:hover{background:rgba(11,26,46,.05)}
+.save svg{width:18px;height:18px}
+.foot{margin-top:16px;text-align:center;font-size:12px;color:var(--muted)}
+.foot button{background:none;border:0;color:var(--navy2);font:600 12.5px var(--sans);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 
-  .tagline {
-    font-family: var(--serif); font-size: 18px; line-height: 1.4; font-weight: 500;
-    color: var(--wood-dark); margin-bottom: 18px;
-  }
-  html[lang="ar"] .tagline { font-weight: 600; font-size: 17px; }
-
-  .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
-  .badge {
-    display: inline-flex; align-items: center; gap: 6px;
-    padding: 6px 11px; border-radius: 999px;
-    font-size: 12.5px; font-weight: 600; color: var(--wood);
-    background: var(--paper-2); border: 1px solid var(--line);
-  }
-  .badge svg { width: 14px; height: 14px; }
-
-  .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 22px; }
-  .btn {
-    display: inline-flex; align-items: center; justify-content: center; gap: 9px;
-    padding: 14px 12px; border-radius: 14px;
-    font-family: inherit; font-size: 15px; font-weight: 700;
-    text-decoration: none; border: 1px solid transparent; cursor: pointer;
-    transition: transform .15s, box-shadow .2s, background .2s;
-  }
-  .btn:active { transform: scale(.98); }
-  .btn svg { width: 18px; height: 18px; flex: none; }
-  .btn.call { background: var(--wood-dark); color: #fbf3e6; }
-  .btn.call:hover { box-shadow: 0 8px 22px rgba(59,38,24,.35); }
-  .btn.wa { background: #25d366; color: #06301a; }
-  .btn.wa:hover { box-shadow: 0 8px 22px rgba(37,211,102,.35); }
-  .btn.quote {
-    grid-column: 1 / -1;
-    background: linear-gradient(120deg, var(--honey), #b5742f);
-    color: #fffaf2;
-  }
-  .btn.quote:hover { box-shadow: 0 10px 26px rgba(201,139,69,.4); }
-
-  h2 {
-    font-family: var(--serif); font-size: 13px; font-weight: 700;
-    text-transform: uppercase; letter-spacing: .16em; color: var(--muted);
-    display: flex; align-items: center; gap: 10px;
-    margin: 0 0 12px;
-  }
-  html[lang="ar"] h2 { letter-spacing: 0; font-size: 14px; }
-  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
-
-  .services { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 22px; }
-  .svc {
-    display: flex; align-items: center; gap: 10px;
-    padding: 11px 12px; border-radius: 12px;
-    background: #fffaf2; border: 1px solid var(--line);
-    font-size: 13.5px; font-weight: 600; color: var(--ink); line-height: 1.25;
-  }
-  .svc svg { width: 20px; height: 20px; flex: none; color: var(--honey); }
-
-  .list { background: #fffaf2; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; margin-bottom: 18px; }
-  .row { display: flex; align-items: center; gap: 12px; padding: 12px 14px; color: inherit; text-decoration: none; }
-  .row + .row { border-top: 1px solid var(--line); }
-  a.row:hover { background: rgba(201,139,69,.07); }
-  .ico {
-    width: 36px; height: 36px; flex: none; border-radius: 10px;
-    display: grid; place-items: center;
-    background: rgba(201,139,69,.14); color: var(--wood);
-  }
-  .ico svg { width: 18px; height: 18px; }
-  .meta { flex: 1; min-width: 0; }
-  .label { font-size: 11.5px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
-  html[lang="ar"] .label { text-transform: none; letter-spacing: 0; font-size: 12.5px; }
-  .value { font-size: clamp(12.5px, 3.5vw, 14.5px); font-weight: 600; margin-top: 2px; overflow-wrap: anywhere; }
-  html[dir="rtl"] .value[dir="ltr"] { text-align: right; }
-  .chev { color: var(--muted); flex: none; }
-  .chev svg { width: 16px; height: 16px; }
-  html[dir="rtl"] .chev svg { transform: scaleX(-1); }
-
-  .save {
-    width: 100%;
-    display: flex; align-items: center; justify-content: center; gap: 9px;
-    padding: 14px; border-radius: 14px;
-    background: transparent; color: var(--wood-dark);
-    border: 1.5px dashed rgba(59,38,24,.45);
-    font: 700 15px var(--sans); cursor: pointer;
-    transition: background .2s;
-  }
-  .save:hover { background: rgba(59,38,24,.05); }
-  .save svg { width: 18px; height: 18px; }
-
-  .foot {
-    margin-top: 16px; text-align: center;
-    font-size: 12px; color: var(--muted);
-  }
-  .foot button {
-    background: none; border: 0; color: var(--wood); font: 600 12.5px var(--sans);
-    cursor: pointer; text-decoration: underline; text-underline-offset: 3px;
-  }
-
-  .toast {
-    position: fixed; left: 50%; bottom: 28px; transform: translate(-50%, 20px); opacity: 0;
-    background: var(--wood-dark); color: #fbf3e6; padding: 10px 16px; border-radius: 12px;
-    font-size: 14px; font-weight: 600; box-shadow: 0 12px 30px rgba(0,0,0,.35);
-    transition: opacity .25s, transform .25s; pointer-events: none;
-  }
-  .toast.show { opacity: 1; transform: translate(-50%, 0); }
-
-  .hidden { display: none !important; }
-  :focus-visible { outline: 2px solid var(--honey); outline-offset: 2px; }
-
-  @media (max-width: 370px) {
-    .services { grid-template-columns: 1fr; }
-    .name { font-size: 24px; }
-    .body { padding: 20px 16px 18px; }
-  }
-  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);opacity:0;background:var(--navy);color:var(--volt);padding:10px 16px;border-radius:12px;font-size:14px;font-weight:600;box-shadow:0 12px 30px rgba(0,0,0,.4);transition:opacity .25s,transform .25s;pointer-events:none}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+:focus-visible{outline:2px solid var(--volt2);outline-offset:2px}
+@media(max-width:370px){.services{grid-template-columns:1fr}.name{font-size:24px}.body{padding:20px 16px 18px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
-
 <body>
 <main class="card">
-
   <section class="hero">
     <div class="top">
-      <span class="brand" data-i18n="brand">Menuiserie Mali</span>
+      <span class="brand" data-i18n="brand">AnbarElec</span>
       <div class="langs" role="group" aria-label="Language">
         <button type="button" data-lang="fr">FR</button>
         <button type="button" data-lang="ar">ع</button>
         <button type="button" data-lang="en">EN</button>
       </div>
     </div>
-
     <div class="who">
       <div class="logo" aria-hidden="true">
-        <!-- hand plane -->
-        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M6 32h36v6H6z" fill="currentColor" fill-opacity=".15"/>
-          <path d="M10 32l4-10h14l6 10"/>
-          <path d="M28 22c0-5 3-9 8-9 3 0 5 2 5 4s-2 3-4 3h-3"/>
-          <path d="M17 22l3-8h5"/>
-        </svg>
+        <svg viewBox="0 0 48 48" fill="currentColor"><path d="M27 3 9 27h11l-3 18 21-27H26z"/></svg>
       </div>
       <div>
-        <h1 class="name" data-i18n="name">Mohammed Mali</h1>
-        <p class="role" data-i18n="role">Menuisier · Ébéniste</p>
+        <h1 class="name" data-i18n="name">Amine Anbar</h1>
+        <p class="role" data-i18n="role">Électricien · Réseaux & Domotique</p>
       </div>
     </div>
-    <div class="ruler" aria-hidden="true"></div>
+    <div class="cable" aria-hidden="true"></div>
   </section>
 
   <section class="body">
-
-    <p class="tagline" data-i18n="tagline">Travail du bois sur mesure, fabriqué avec soin et livré dans les délais.</p>
-
+    <p class="tagline" data-i18n="tagline">Installation électrique, réseaux, caméras et maison intelligente, en toute sécurité.</p>
     <div class="badges" id="badges"></div>
-
     <div class="actions">
       <a class="btn call" id="callBtn" href="#">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
@@ -289,232 +163,164 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
       <span data-i18n="save">Enregistrer le contact</span>
     </button>
-
     <p class="foot"><button type="button" id="shareBtn" data-i18n="share">Partager cette carte</button></p>
   </section>
 </main>
-
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
-/* =====================================================================
-   EDIT YOUR DETAILS HERE.
-   Leave a field as "" to hide it from the card.
-   ===================================================================== */
+/* ===== EDIT YOUR DETAILS HERE. Leave "" to hide a field. ===== */
 const CONFIG = {
-  phone: "+212671116361",
-  phoneDisplay: "+212 6 71 11 63 61",
-  whatsapp: "212671116361",
-  email: "medmali@gmail.com",
-
-  city: "",            // e.g. "Oujda"
-  address: "",         // e.g. "Atelier, Rue ..., Oujda"
-  mapsLink: "",        // paste a Google Maps link to the workshop
-  hours: "",           // e.g. "Lun–Sam · 9:00–19:00"
-  yearsExperience: "", // e.g. "15"
-  instagram: "",       // e.g. "https://instagram.com/menuiserie.mali"
-  facebook: ""         // e.g. "https://facebook.com/menuiserie.mali"
+  phones: [
+    { tel: "+212637214054", display: "06 37 21 40 54" },
+    { tel: "+212650962846", display: "06 50 96 28 46" }
+  ],
+  whatsapp: "212637214054",
+  email: "kokokabo2000@gmail.com",
+  city: "", address: "", mapsLink: "", hours: "",
+  yearsExperience: "", instagram: "", facebook: ""
 };
 
 const SERVICES = [
-  { icon: "sofa",     fr: "Meubles sur mesure",     en: "Custom furniture",      ar: "أثاث حسب الطلب" },
-  { icon: "kitchen",  fr: "Cuisines",               en: "Kitchens",              ar: "مطابخ" },
-  { icon: "door",     fr: "Portes et fenêtres",     en: "Doors & windows",       ar: "أبواب ونوافذ" },
-  { icon: "wardrobe", fr: "Placards et dressings",  en: "Wardrobes & closets",   ar: "خزائن ودواليب" },
-  { icon: "ceiling",  fr: "Plafonds et habillage",  en: "Ceilings & paneling",   ar: "أسقف وتكسية خشبية" },
-  { icon: "tools",    fr: "Réparation et rénovation", en: "Repair & restoration", ar: "إصلاح وترميم" }
+  { icon: "network", fr: "Installation réseau (Wi-Fi, LAN)", en: "Network installation (Wi-Fi, LAN)", ar: "تركيب الشبكات (واي فاي، LAN)" },
+  { icon: "cam",     fr: "Caméras de surveillance",         en: "Home security cameras",            ar: "كاميرات المراقبة" },
+  { icon: "smart",   fr: "Maison intelligente",             en: "Smart home",                       ar: "المنزل الذكي" },
+  { icon: "bolt",    fr: "Installation électrique",         en: "Electrical installation",          ar: "تركيبات كهربائية" },
+  { icon: "bulb",    fr: "Éclairage et tableaux",           en: "Lighting & panels",                ar: "إنارة ولوحات كهربائية" },
+  { icon: "tools",   fr: "Dépannage et rénovation",         en: "Repair & renovation",              ar: "إصلاح وصيانة" }
 ];
 
 const I18N = {
-  fr: {
-    brand: "Menuiserie Mali",
-    name: "Mohammed Mali",
-    role: "Menuisier · Ébéniste",
-    tagline: "Travail du bois sur mesure, fabriqué avec soin et livré dans les délais.",
-    call: "Appeler", whatsapp: "WhatsApp",
-    quote: "Demander un devis gratuit",
-    servicesTitle: "Services", contactTitle: "Contact",
-    phone: "Téléphone", email: "E-mail", workshop: "Atelier", hours: "Horaires",
-    save: "Enregistrer le contact", share: "Partager cette carte",
-    years: n => `${n} ans d'expérience`,
-    madeToMeasure: "Sur mesure", freeQuote: "Devis gratuit",
-    waMsg: "Bonjour Mohammed, je voudrais un devis pour : ",
-    saved: "Fiche contact téléchargée", linkCopied: "Lien copié !"
-  },
-  en: {
-    brand: "Mali Woodworks",
-    name: "Mohammed Mali",
-    role: "Carpenter · Cabinet maker",
-    tagline: "Custom woodwork, built with care and delivered on time.",
-    call: "Call", whatsapp: "WhatsApp",
-    quote: "Get a free quote",
-    servicesTitle: "Services", contactTitle: "Contact",
-    phone: "Phone", email: "Email", workshop: "Workshop", hours: "Hours",
-    save: "Save contact", share: "Share this card",
-    years: n => `${n} years of experience`,
-    madeToMeasure: "Made to measure", freeQuote: "Free quote",
-    waMsg: "Hello Mohammed, I'd like a quote for: ",
-    saved: "Contact file downloaded", linkCopied: "Link copied!"
-  },
-  ar: {
-    brand: "نجارة مالي",
-    name: "محمد مالي",
-    role: "نجار · صانع أثاث",
-    tagline: "أعمال خشبية حسب الطلب، بإتقان وفي الوقت المحدد.",
-    call: "اتصال", whatsapp: "واتساب",
-    quote: "اطلب عرض سعر مجاني",
-    servicesTitle: "الخدمات", contactTitle: "التواصل",
-    phone: "الهاتف", email: "البريد الإلكتروني", workshop: "الورشة", hours: "أوقات العمل",
-    save: "حفظ جهة الاتصال", share: "مشاركة البطاقة",
-    years: n => `${n} سنة من الخبرة`,
-    madeToMeasure: "حسب المقاس", freeQuote: "عرض سعر مجاني",
-    waMsg: "السلام عليكم سي محمد، أريد عرض سعر لـ: ",
-    saved: "تم تنزيل ملف جهة الاتصال", linkCopied: "تم نسخ الرابط!"
-  }
+  fr: { brand:"AnbarElec", name:"Amine Anbar", role:"Électricien · Réseaux & Domotique",
+    tagline:"Installation électrique, réseaux, caméras et maison intelligente, en toute sécurité.",
+    call:"Appeler", whatsapp:"WhatsApp", quote:"Demander un devis gratuit",
+    servicesTitle:"Services", contactTitle:"Contact",
+    phone:"Téléphone", email:"E-mail", workshop:"Adresse", hours:"Horaires",
+    save:"Enregistrer le contact", share:"Partager cette carte",
+    years:n=>`${n} ans d'expérience`, safe:"Travail sécurisé", freeQuote:"Devis gratuit",
+    waMsg:"Bonjour Amine, je voudrais un devis pour : ",
+    saved:"Fiche contact téléchargée", linkCopied:"Lien copié !" },
+  en: { brand:"AnbarElec", name:"Amine Anbar", role:"Electrician · Networks & Smart home",
+    tagline:"Electrical work, networks, cameras and smart homes, done safely.",
+    call:"Call", whatsapp:"WhatsApp", quote:"Get a free quote",
+    servicesTitle:"Services", contactTitle:"Contact",
+    phone:"Phone", email:"Email", workshop:"Address", hours:"Hours",
+    save:"Save contact", share:"Share this card",
+    years:n=>`${n} years of experience`, safe:"Safe work", freeQuote:"Free quote",
+    waMsg:"Hello Amine, I'd like a quote for: ",
+    saved:"Contact file downloaded", linkCopied:"Link copied!" },
+  ar: { brand:"أنبار إلك", name:"أمين أنبار", role:"كهربائي · شبكات ومنزل ذكي",
+    tagline:"تركيبات كهربائية، شبكات، كاميرات ومنازل ذكية، بأمان وإتقان.",
+    call:"اتصال", whatsapp:"واتساب", quote:"اطلب عرض سعر مجاني",
+    servicesTitle:"الخدمات", contactTitle:"التواصل",
+    phone:"الهاتف", email:"البريد الإلكتروني", workshop:"العنوان", hours:"أوقات العمل",
+    save:"حفظ جهة الاتصال", share:"مشاركة البطاقة",
+    years:n=>`${n} سنة من الخبرة`, safe:"عمل آمن", freeQuote:"عرض سعر مجاني",
+    waMsg:"السلام عليكم سي أمين، أريد عرض سعر لـ: ",
+    saved:"تم تنزيل ملف جهة الاتصال", linkCopied:"تم نسخ الرابط!" }
 };
 
-/* ---------- Icons ---------- */
-const S = 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"';
+const S='viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"';
 const ICONS = {
-  sofa:     `<svg ${S}><path d="M4 11V8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v3"/><path d="M2 13a2 2 0 0 1 4 0v2h12v-2a2 2 0 0 1 4 0v5H2z"/><path d="M5 18v2M19 18v2"/></svg>`,
-  kitchen:  `<svg ${S}><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 10h18M12 10v11M8 6.5h.01M16 6.5h.01M9 14v2M15 14v2"/></svg>`,
-  door:     `<svg ${S}><path d="M5 21V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v17"/><path d="M3 21h18M15 12h.01"/></svg>`,
-  wardrobe: `<svg ${S}><rect x="4" y="2" width="16" height="18" rx="1.5"/><path d="M12 2v18M10 9v3M14 9v3M6 20v2M18 20v2"/></svg>`,
-  ceiling:  `<svg ${S}><path d="M3 4h18M3 8h18M3 12h18"/><path d="M8 12v8M16 12v8M5 20h14"/></svg>`,
-  tools:    `<svg ${S}><path d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-3-3 8-8"/><path d="m3 21 7-7M7 3l4 4-2 2-4-4z"/></svg>`,
-  phone:    `<svg ${S}><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>`,
-  mail:     `<svg ${S}><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>`,
-  pin:      `<svg ${S}><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
-  clock:    `<svg ${S}><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>`,
-  insta:    `<svg ${S}><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>`,
-  fb:       `<svg ${S}><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>`,
-  chev:     `<svg ${S}><path d="m9 18 6-6-6-6"/></svg>`,
-  check:    `<svg ${S}><path d="M20 6 9 17l-5-5"/></svg>`,
-  award:    `<svg ${S}><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg>`,
-  ruler:    `<svg ${S}><path d="M21.3 15.3 8.7 2.7a1 1 0 0 0-1.4 0L2.7 7.3a1 1 0 0 0 0 1.4l12.6 12.6a1 1 0 0 0 1.4 0l4.6-4.6a1 1 0 0 0 0-1.4z"/><path d="m7.5 10.5 2-2M10.5 13.5l2-2M13.5 16.5l2-2"/></svg>`
+  network:`<svg ${S}><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-5h14v5"/></svg>`,
+  cam:`<svg ${S}><path d="M3 7h11a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m16 11 5-3v8l-5-3"/><path d="M7 21h5"/></svg>`,
+  smart:`<svg ${S}><path d="M3 11 12 3l9 8"/><path d="M5 10v10h14V10"/><path d="M9.5 14.5a3.5 3.5 0 0 1 5 0M7.5 12.5a6.4 6.4 0 0 1 9 0M12 17.5h.01"/></svg>`,
+  bolt:`<svg ${S}><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>`,
+  bulb:`<svg ${S}><path d="M9 18h6M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V18h6v-1.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z"/></svg>`,
+  tools:`<svg ${S}><path d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-3-3 8-8"/><path d="m3 21 7-7M7 3l4 4-2 2-4-4z"/></svg>`,
+  phone:`<svg ${S}><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>`,
+  mail:`<svg ${S}><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>`,
+  pin:`<svg ${S}><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
+  clock:`<svg ${S}><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>`,
+  insta:`<svg ${S}><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>`,
+  fb:`<svg ${S}><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>`,
+  chev:`<svg ${S}><path d="m9 18 6-6-6-6"/></svg>`,
+  check:`<svg ${S}><path d="M20 6 9 17l-5-5"/></svg>`,
+  award:`<svg ${S}><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg>`,
+  shield:`<svg ${S}><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>`
 };
 
-/* ---------- Render ---------- */
-let current = "fr";
-const $ = id => document.getElementById(id);
-const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+let current="fr";
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
-function row({ icon, label, value, href, ltr, external }) {
-  const tag = href ? "a" : "div";
-  const attrs = href ? ` href="${esc(href)}"${external ? ' target="_blank" rel="noopener"' : ""}` : "";
-  return `<${tag} class="row"${attrs}>
-    <span class="ico">${ICONS[icon]}</span>
-    <span class="meta"><span class="label" style="display:block">${esc(label)}</span>
-      <span class="value" style="display:block"${ltr ? ' dir="ltr"' : ""}>${esc(value)}</span></span>
-    ${href ? `<span class="chev">${ICONS.chev}</span>` : ""}
-  </${tag}>`;
+function row({icon,label,value,href,ltr,external}){
+  const tag=href?"a":"div";
+  const attrs=href?` href="${esc(href)}"${external?' target="_blank" rel="noopener"':""}`:"";
+  return `<${tag} class="row"${attrs}><span class="ico">${ICONS[icon]}</span>
+    <span class="meta"><span class="label">${esc(label)}</span><span class="value"${ltr?' dir="ltr"':""}>${esc(value)}</span></span>
+    ${href?`<span class="chev">${ICONS.chev}</span>`:""}</${tag}>`;
 }
 
-function render() {
-  const t = I18N[current];
+function render(){
+  const t=I18N[current], P=CONFIG.phones;
+  const badges=[];
+  if(CONFIG.yearsExperience) badges.push(["award",t.years(CONFIG.yearsExperience)]);
+  badges.push(["shield",t.safe],["check",t.freeQuote]);
+  if(CONFIG.city) badges.push(["pin",CONFIG.city]);
+  $("badges").innerHTML=badges.map(([i,x])=>`<span class="badge">${ICONS[i]}${esc(x)}</span>`).join("");
+  $("services").innerHTML=SERVICES.map(s=>`<div class="svc">${ICONS[s.icon]}<span>${esc(s[current])}</span></div>`).join("");
 
-  // Badges
-  const badges = [];
-  if (CONFIG.yearsExperience) badges.push(["award", t.years(CONFIG.yearsExperience)]);
-  badges.push(["ruler", t.madeToMeasure]);
-  badges.push(["check", t.freeQuote]);
-  if (CONFIG.city) badges.push(["pin", CONFIG.city]);
-  $("badges").innerHTML = badges.map(([i, txt]) => `<span class="badge">${ICONS[i]}${esc(txt)}</span>`).join("");
+  const rows=P.map(p=>row({icon:"phone",label:t.phone,value:p.display,href:"tel:"+p.tel,ltr:true}));
+  rows.push(row({icon:"mail",label:t.email,value:CONFIG.email,href:"mailto:"+CONFIG.email,ltr:true}));
+  if(CONFIG.address||CONFIG.mapsLink) rows.push(row({icon:"pin",label:t.workshop,value:CONFIG.address||CONFIG.city||"Google Maps",href:CONFIG.mapsLink,external:true}));
+  if(CONFIG.hours) rows.push(row({icon:"clock",label:t.hours,value:CONFIG.hours}));
+  if(CONFIG.instagram) rows.push(row({icon:"insta",label:"Instagram",value:CONFIG.instagram.replace(/^https?:\/\/(www\.)?/,""),href:CONFIG.instagram,ltr:true,external:true}));
+  if(CONFIG.facebook) rows.push(row({icon:"fb",label:"Facebook",value:CONFIG.facebook.replace(/^https?:\/\/(www\.)?/,""),href:CONFIG.facebook,ltr:true,external:true}));
+  $("contactList").innerHTML=rows.join("");
 
-  // Services
-  $("services").innerHTML = SERVICES.map(s => `<div class="svc">${ICONS[s.icon]}<span>${esc(s[current])}</span></div>`).join("");
-
-  // Contact rows
-  const rows = [
-    row({ icon: "phone", label: t.phone, value: CONFIG.phoneDisplay, href: "tel:" + CONFIG.phone, ltr: true }),
-    row({ icon: "mail", label: t.email, value: CONFIG.email, href: "mailto:" + CONFIG.email, ltr: true })
-  ];
-  if (CONFIG.address || CONFIG.mapsLink) rows.push(row({ icon: "pin", label: t.workshop, value: CONFIG.address || CONFIG.city || "Google Maps", href: CONFIG.mapsLink, external: true }));
-  if (CONFIG.hours) rows.push(row({ icon: "clock", label: t.hours, value: CONFIG.hours }));
-  if (CONFIG.instagram) rows.push(row({ icon: "insta", label: "Instagram", value: CONFIG.instagram.replace(/^https?:\/\/(www\.)?/, ""), href: CONFIG.instagram, ltr: true, external: true }));
-  if (CONFIG.facebook) rows.push(row({ icon: "fb", label: "Facebook", value: CONFIG.facebook.replace(/^https?:\/\/(www\.)?/, ""), href: CONFIG.facebook, ltr: true, external: true }));
-  $("contactList").innerHTML = rows.join("");
-
-  // Links
-  $("callBtn").href = "tel:" + CONFIG.phone;
-  $("waBtn").href = "https://wa.me/" + CONFIG.whatsapp;
-  $("quoteBtn").href = "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(t.waMsg);
+  $("callBtn").href="tel:"+P[0].tel;
+  $("waBtn").href="https://wa.me/"+CONFIG.whatsapp;
+  $("quoteBtn").href="https://wa.me/"+CONFIG.whatsapp+"?text="+encodeURIComponent(t.waMsg);
 }
 
-function setLang(lang) {
-  if (!I18N[lang]) lang = "fr";
-  current = lang;
-  const t = I18N[lang];
-  document.documentElement.lang = lang;
-  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
-  document.title = `${t.name} · ${t.role}`;
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const v = t[el.dataset.i18n];
-    if (typeof v === "string") el.textContent = v;
-  });
-  document.querySelectorAll(".langs button").forEach(b =>
-    b.setAttribute("aria-pressed", b.dataset.lang === lang ? "true" : "false"));
+function setLang(lang){
+  if(!I18N[lang]) lang="fr";
+  current=lang;
+  const t=I18N[lang];
+  document.documentElement.lang=lang;
+  document.documentElement.dir=lang==="ar"?"rtl":"ltr";
+  document.title=`${t.name} · ${t.brand}`;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{const v=t[el.dataset.i18n]; if(typeof v==="string") el.textContent=v;});
+  document.querySelectorAll(".langs button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===lang?"true":"false"));
   render();
-  try { localStorage.setItem("mm-card-lang", lang); } catch (e) {}
+  try{localStorage.setItem("anbar-card-lang",lang)}catch(e){}
 }
 
-(function init() {
-  let lang = null;
-  try { lang = localStorage.getItem("mm-card-lang"); } catch (e) {}
-  const q = new URLSearchParams(location.search).get("lang");
-  if (q) lang = q;
-  if (!lang) {
-    const nav = (navigator.language || "fr").slice(0, 2).toLowerCase();
-    lang = I18N[nav] ? nav : "fr";
-  }
+(function(){
+  let lang=null;
+  try{lang=localStorage.getItem("anbar-card-lang")}catch(e){}
+  const q=new URLSearchParams(location.search).get("lang");
+  if(q) lang=q;
+  if(!lang){const n=(navigator.language||"fr").slice(0,2).toLowerCase(); lang=I18N[n]?n:"fr";}
   setLang(lang);
 })();
+document.querySelectorAll(".langs button").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.lang)));
 
-document.querySelectorAll(".langs button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+let tt;
+function toast(m){const el=$("toast");el.textContent=m;el.classList.add("show");clearTimeout(tt);tt=setTimeout(()=>el.classList.remove("show"),1800)}
 
-/* ---------- Toast ---------- */
-let toastTimer;
-function toast(msg) {
-  const el = $("toast");
-  el.textContent = msg; el.classList.add("show");
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => el.classList.remove("show"), 1800);
-}
-
-/* ---------- Save contact (vCard) ---------- */
-$("saveBtn").addEventListener("click", () => {
-  const lines = [
-    "BEGIN:VCARD", "VERSION:3.0",
-    "N:Mali;Mohammed;;;",
-    "FN:Mohammed Mali",
-    "ORG:Menuiserie Mali",
-    "TITLE:Menuisier / Carpenter / نجار",
-    "TEL;TYPE=CELL:" + CONFIG.phone,
-    "EMAIL;TYPE=INTERNET:" + CONFIG.email
-  ];
-  if (CONFIG.address) lines.push("ADR;TYPE=WORK:;;" + CONFIG.address + ";" + (CONFIG.city || "") + ";;;Morocco");
-  if (CONFIG.instagram) lines.push("URL:" + CONFIG.instagram);
-  lines.push("URL:" + location.href.split("?")[0]);
-  lines.push("NOTE:Meubles sur mesure, cuisines, portes, placards");
-  lines.push("END:VCARD");
-
-  const blob = new Blob([lines.join("\r\n")], { type: "text/vcard;charset=utf-8" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url; a.download = "Mohammed-Mali.vcf";
-  document.body.appendChild(a); a.click(); a.remove();
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
+$("saveBtn").addEventListener("click",()=>{
+  const L=["BEGIN:VCARD","VERSION:3.0","N:Anbar;Amine;;;","FN:Amine Anbar","ORG:AnbarElec",
+    "TITLE:Électricien / Electrician / كهربائي"];
+  CONFIG.phones.forEach(p=>L.push("TEL;TYPE=CELL:"+p.tel));
+  L.push("EMAIL;TYPE=INTERNET:"+CONFIG.email);
+  if(CONFIG.address) L.push("ADR;TYPE=WORK:;;"+CONFIG.address+";"+(CONFIG.city||"")+";;;Morocco");
+  if(CONFIG.instagram) L.push("URL:"+CONFIG.instagram);
+  L.push("URL:"+location.href.split("?")[0]);
+  L.push("NOTE:Électricité, réseaux, caméras, maison intelligente","END:VCARD");
+  const url=URL.createObjectURL(new Blob([L.join("\r\n")],{type:"text/vcard;charset=utf-8"}));
+  const a=document.createElement("a");
+  a.href=url;a.download="Amine-Anbar.vcf";
+  document.body.appendChild(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
   toast(I18N[current].saved);
 });
 
-/* ---------- Share ---------- */
-$("shareBtn").addEventListener("click", async () => {
-  const t = I18N[current];
-  if (navigator.share) {
-    try { await navigator.share({ title: t.name, text: t.role, url: location.href }); } catch (e) {}
-  } else {
-    try { await navigator.clipboard.writeText(location.href); toast(t.linkCopied); } catch (e) {}
-  }
+$("shareBtn").addEventListener("click",async()=>{
+  const t=I18N[current];
+  if(navigator.share){try{await navigator.share({title:t.name,text:t.role,url:location.href})}catch(e){}}
+  else{try{await navigator.clipboard.writeText(location.href);toast(t.linkCopied)}catch(e){}}
 });
 </script>
 </body>
